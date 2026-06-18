@@ -1,0 +1,41 @@
+Problem statement: Building an AI powered-restaurant recommendation system (using Zomato dataset)
+Why?: Food delivery platforms offer thousands of options making it difficult to decide. Zomato has filters but they fail because the user is still being presented with hundreds of options. The user does not get an opportunity to define a set of preferences that best represent what they want — leading to decision fatigue and poor choices. This tool solves that by using an LLM to take detailed user preferences and return a small, personalized, explainable set of recommendations.
+Aim: Build the tool where users can provide different set of preferences. Using that, the LLM system will provide recommendations based on the user preferences. 
+Objective:
+Take user preferences ( location, budget, cuisine, ratings, delivery time preference, discounts/ promotions preference)
+Use a real world dataset of preferences. 
+Leverage an LLM to generate personalized, human like recommendations.
+Displays clear and userful results to the user. 
+System workflow:
+Data ingestion: Load and preprocess the Zomato dataset from Hugging Face (https://huggingface.co/datasets/ManikaSaini/zomato-restaurant-recommendation )
+Extract relevant fields such as restaurant name, location, cuisine, cost, rating, etc.
+User input
+Collect user preferences:
+Location (example: Delhi, Bangalore)
+Budget (low, medium, high)
+Cuisine (example: Chinese, North Indian)
+Minimum rating
+Delivery time preference ( example in 20 minutes, 30 minutes etc)
+Discounts/promotions preference (example: restaurants offering Buy one get one free, 25% discount)
+Any additional preferences (example: diet friendly etc)
+Integration layer:
+Filter and prepare relevant restaurant data based on user input
+Pass structured results into an LLM prompt
+Design a prompt that helps the LLM reason and rank options
+Recommendation engine:
+User the LLM to:
+Rank restaurants
+Provide explanations
+Optionally summarize choices
+Output display:
+Present top recommendations in a user friendly format:
+Restaurant name
+Cuising
+Rating
+Estimate cost
+AI generated explanation
+
+Design flow
+
+Wireframe
+

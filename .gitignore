@@ -1,0 +1,5 @@
+.env
+.node-bin/
+node_modules/
+zomato.csv
+zomato.db
